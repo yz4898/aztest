@@ -134,7 +134,7 @@ output "tls_private_key" {
 }
 
 # Create virtual machine
-resource "azurerm_linux_virtual_machine" "myterraformvm" {
+resource "azurerm_linux_virtual_machine" "clientVM" {
   name                  = "client"
   location              = "eastus"
   resource_group_name   = azurerm_resource_group.yz4898-eastus-test-rg.name
@@ -142,7 +142,7 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
   size                  = "Standard_DS1_v2"
 
   os_disk {
-    name                 = "myOsDisk"
+    name                 = "clientOsDisk"
     caching              = "ReadWrite"
     storage_account_type = "Premium_LRS"
   }
