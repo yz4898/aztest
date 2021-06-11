@@ -135,7 +135,7 @@ output "tls_private_key" {
 
 # Create virtual machine
 resource "azurerm_linux_virtual_machine" "myterraformvm" {
-  name                  = "myVM"
+  name                  = "client"
   location              = "eastus"
   resource_group_name   = azurerm_resource_group.yz4898-eastus-test-rg.name
   network_interface_ids = [azurerm_network_interface.client-nic.id]
@@ -154,7 +154,7 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     version   = "latest"
   }
 
-  computer_name                   = "myvm"
+  computer_name                   = "client"
   admin_username                  = "azureuser"
   disable_password_authentication = true
 
