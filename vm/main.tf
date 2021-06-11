@@ -124,12 +124,12 @@ resource "azurerm_storage_account" "yz4898storageaccount" {
 }
 
 # Create (and display) an SSH key
-resource "tls_private_key" "example_ssh" {
+resource "tls_private_key" "yz4898_ssh" {
   algorithm = "RSA"
   rsa_bits  = 4096
 }
 output "tls_private_key" {
-  value     = tls_private_key.example_ssh.private_key_pem
+  value     = tls_private_key.yz4898_ssh.private_key_pem
   sensitive = true
 }
 
