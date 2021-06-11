@@ -67,7 +67,7 @@ resource "azurerm_network_security_group" "yz4898-eastus-client-nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "22"
-    source_address_prefixes    = []"70.135.70.253/32", "136.49.156.194/32"]
+    source_address_prefixes    = ["70.135.70.253/32", "136.49.156.194/32"]
     destination_address_prefix = "*"
   }
 
